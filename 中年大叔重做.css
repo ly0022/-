@@ -1,0 +1,312 @@
+:root {
+    --head: #cc7c63;
+    --hair: rgb(22, 20, 17);
+    --color: #504744ab;
+    --face: #cc7c63;
+    --ring: white;
+    --ear:#c44d15;
+    --beard:rgb(20, 19, 18);
+}
+.a{
+    width: 33.333333%;
+    height: 33.333333%;
+    background-color: #ffbe00;
+    float: left;
+}
+.a:hover:not(.a5){
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.head {
+    width: 200px;
+    height: 260px;
+    background-color: var(--head);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-50%);
+    box-shadow: 0 -60px 0px var(--color) inset, 0 60px 0px var(--hair) inset;
+    border-radius: 90px 90px 80px 80px/90px 90px 100px 100px;
+    
+}
+
+.head::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    
+    background-color: var(--face);
+    /* background-color: brown; */
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%) translatey(-50%);
+    border-radius: 60px 60px 100px 100px;
+    z-index: 2;
+    transition: 0.3s linear;
+}
+
+.ear {
+    width: 50px;
+    height: 50px;
+    background-color: var(--head);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-50%);
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+.ear::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--ear);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-50%);
+    border-radius: 50%;
+}
+
+
+.ear-l::after {
+    content: "";
+    width: 8px;
+    height: 10px;
+    background-color: var(--ring);
+    position: absolute;
+    left: 30%;
+    top: 78%;
+    border-radius: 50%;
+}
+
+.ear-r::after {
+    content: "";
+    width: 8px;
+    height: 10px;
+    background-color: var(--ring);
+    position: absolute;
+    right: 30%;
+    top: 78%;
+    border-radius: 50%;
+}
+.ear-l {
+    left: 0%;
+}
+
+.ear-r {
+    left: 100%;
+}
+.face{
+width: 120px;
+height: 150px;
+
+position: absolute;
+z-index: 5;
+left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-50%);
+    transition: 0.3s linear;
+}
+.face::before{
+    content: "";
+    width:32px;
+    height:31px;
+    position: absolute;
+    /* background-color: black; */
+    background-color:var(--face);
+    left: 50%;
+    top: 73%;
+    transform: translateX(-50%) translatey(-50%);
+    border-radius:50%;
+    z-index: 9;
+}
+.eye-l{
+    width: 60px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+.eye-r{
+    width: 60px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    right: -10px;
+}
+.eye-l::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+.eye-r::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+.nose{
+    width: 0px;
+    height: 0px;
+    border-bottom: 40px solid;
+    border-left: 20px solid;
+    border-right: 20px solid;
+    border-color: transparent transparent var(--ear);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-55%);
+}
+
+
+.beard{
+    width:110px;
+    height:130px;
+    position: absolute;
+    background-color: var(--beard);
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+    border-radius: 20px /30px;
+}
+.beard::before{
+    content: "";
+    width:80px;
+    height:60px;
+    position: absolute;
+    background-color:var(--face);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-90%);
+    border-radius: 60px 60px 100px 100px;
+}
+.beard::after{
+    content: "";
+    width:50px;
+    height:25px;
+    position: absolute;
+    background-color:var(--ear);
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translatey(-100%);
+     border-radius: 0px 0px 25px 25px 
+}
+/* 分界线 */
+.a2:hover~.head .face{
+    transform: translateX(-50%) translatey(-70%);
+    
+}
+.a2:hover~.head::before{
+    transform: translateX(-50%) translatey(-55%);
+    
+}
+.a2:hover~.head .ear{
+    transform: translateX(-50%) translatey(-40%);
+}
+/* 分界线 */
+.a1:hover~.head .face{
+    transform: translateX(-65%) translatey(-70%);
+    
+}
+.a1:hover~.head::before{
+    transform: translateX(-50%) translatey(-55%);
+    
+}
+.a1:hover~.head .ear-l{
+    transform: translateX(-40%) translatey(-50%);
+}
+.a1:hover~.head .ear-r{
+    transform: translateX(-40%) translatey(-50%);
+}
+/* 分界线 */
+.a3:hover~.head .face{
+    transform: translateX(-35%) translatey(-70%);
+    
+}
+.a3:hover~.head::before{
+    transform: translateX(-50%) translatey(-55%);
+    
+}
+.a3:hover~.head .ear-l{
+    transform: translateX(-60%) translatey(-50%);
+}
+.a3:hover~.head .ear-r{
+    transform: translateX(-60%) translatey(-50%);
+}
+/* 分界线 */
+.a4:hover~.head .face{
+    transform: translateX(-60%) translatey(-50%);
+    
+}
+.a4:hover~.head .ear{
+    transform: translateX(-40%) translatey(-50%);
+}
+/* 分界线 */
+.a6:hover~.head .face{
+    transform: translateX(-40%) translatey(-50%);
+    
+}
+.a6:hover~.head .ear{
+    transform: translateX(-60%) translatey(-50%);
+}
+/* 分界线 */
+.a8:hover~.head .face{
+    transform: translateX(-50%) translatey(-40%);
+    
+}
+.a8:hover~.head::before{
+    transform: translateX(-50%) translatey(-45%);
+    
+}
+.a8:hover~.head .ear{
+    transform: translateX(-50%) translatey(-60%);
+}
+/* 分界线 */
+.a7:hover~.head .face{
+    transform: translateX(-65%) translatey(-40%);
+    
+}
+.a7:hover~.head::before{
+    transform: translateX(-50%) translatey(-45%);
+    
+}
+.a7:hover~.head .ear-l{
+    transform: translateX(-40%) translatey(-50%);
+}
+.a7:hover~.head .ear-r{
+    transform: translateX(-40%) translatey(-50%);
+}
+/* 分界线 */
+.a9:hover~.head .face{
+    transform: translateX(-35%) translatey(-40%);
+    
+}
+.a9:hover~.head::before{
+    transform: translateX(-50%) translatey(-45%);
+    
+}
+.a9:hover~.head .ear-l{
+    transform: translateX(-60%) translatey(-50%);
+}
+.a9:hover~.head .ear-r{
+    transform: translateX(-60%) translatey(-50%);
+}
